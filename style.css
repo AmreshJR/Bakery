@@ -8,9 +8,11 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
-
+.navbar{
+  font-size: 30px;
+}
 .bg-image{
-    min-height: 920px;
+    min-height: 1080px;
     position: relative;
     height: 100%;
     background: url(./src/Home.jpg) center center;
@@ -22,9 +24,11 @@ body {
     color: #fff;
     
 }
+.g-color{
+font-weight: bolder;    
+}
 .quotes{
-
-border: 20px solid whitesmoke;
+border: 20px solid rgba(255,255,255,.9);
 float: right;
 margin-left: 10%;
 margin-top: 20%;
@@ -34,11 +38,15 @@ font-weight: 1000;
 color: white;
 font-style: italic;
 }
+
 .qot{
-    color:#f0897d;
+    color:#cd3335;
+    font-size: xx-large;
 }
 .para{
-    color: #fff;
+    color: rgba(0,0,0,.55);
+    font-size: x-large;
+
 }
   body {
     margin: 0;
@@ -109,5 +117,8 @@ font-style: italic;
     }
     img {
       margin: auto;
+    }
+    .bg-image{
+      min-height: 860px;
     }
   }

@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+background-color: #e5c6bb !important;
+}
+.navbar{
+    font-size: 30px;
+    font-weight: bold;
+    color: #d94545 !important;
+  }
+ .slideshow{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   padding: 10px;
+   padding-bottom: 20px;
+ }
+  .carousel {
+    width:640px;
+    height:360px;
+    
+  }
+  .underline{
+    text-decoration: underline;
+    color: #d94545 !important;
+  }
+  .text-reset{
+    text-decoration: none;
+  }
+  .text-reset:hover{
+  color: #d94545 !important; 
+  }
+  .flex-column {
+    max-width: 250px;
+  }
+
+  img {
+    margin: 6px;
+  }
+  
