@@ -1,7 +1,7 @@
 let storeData = [
     {
         ProductID : "Pudding",
-        ProductValue: "Rs. 100",
+        ProductValue: "Wipped Cream, Vanila",
         ProductSrc: "../src/Muffin.jpg"
     },
    
@@ -68,7 +68,7 @@ data.forEach(e => {
     productInfo_1.className = "text-head";
     productInfo_1.textContent = e.ProductID;
     productName.appendChild(productInfo_1);
-    let productIndo_2=document.createElement("h6");
+    let productIndo_2=document.createElement("p");
     productIndo_2.className = "text-content";
     productIndo_2.textContent = e.ProductValue;
     productName.appendChild(productIndo_2);

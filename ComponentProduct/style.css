@@ -41,6 +41,9 @@ display: none;
     max-width: 100%;
     border-radius: 6px;
   }
+  .text-head{
+    padding-top: 2px;
+  }
 .text-head:hover{
   color: #d94545;
 }
@@ -98,3 +101,20 @@ display: none;
     height:60px;   /* Height of the footer */
     
  }
+ 
+ .text-content{
+   color: #cb937e;
+   text-align: center;
+ }
+ .btn:hover{
+  background-color: #cb937e !important;
+ }
+ .form-control{
+   border-color: #cb937e !important;
+ }
+ .form-control:focus {
+
+  border-color: #cb937e !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(203 147 126 / 25%);
+}
