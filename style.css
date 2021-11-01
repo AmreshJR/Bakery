@@ -1,8 +1,8 @@
 
 *{
-    margin: 0%;
+    margin: 0;
     box-sizing:border-box;
-    padding: 0%;
+    padding: 0;
 }
 body {
     margin: 0;
@@ -122,3 +122,18 @@ font-style: italic;
       min-height: 860px;
     }
   }
+  .underline{
+    text-decoration: underline;
+    color: #d94545 !important;
+  }
+  .text-reset{
+    text-decoration: none;
+  }
+  .text-reset:hover{
+  color: #d94545 !important; 
+  }
+  footer{
+    position: absolute;
+    width: 100%;
+  }
+   
