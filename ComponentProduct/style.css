@@ -35,6 +35,8 @@ h5 {
   justify-content: center;
   background-color: rgba(203,147,126 ,25%);
   border-radius: 10px;
+  padding: 2%;
+  padding-right: 2%;
 }
 
 .product-card {

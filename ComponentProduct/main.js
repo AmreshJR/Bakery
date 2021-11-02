@@ -41,7 +41,7 @@ let storeData = [
         ProductValue: "Molten chocolate cakes also known as lava cakes, are rich individual chocolate cakes with oozing molten centers.",
         ProductSrc: "../src/Lava.jpg"
     }
-]
+];
 
 showCart = (data) => {
     data.forEach(e => {
@@ -57,7 +57,7 @@ showCart = (data) => {
         let productInfo_1 = document.createElement("h5");
         productInfo_1.className = "text-head";
         productInfo_1.textContent = e.ProductID;
-        
+
         let productIndo_2 = document.createElement("p");
         productIndo_2.className = "text-content";
         productIndo_2.textContent = e.ProductValue;
@@ -86,7 +86,7 @@ filter = () => {
         else {
             document.getElementById("btn-search").style.display = "block";
             let result = e.ProductID.toLowerCase();
-            return result.includes(val.toLowerCase());;
+            return result.includes(val.toLowerCase());
         }
     }))
 }
@@ -100,11 +100,12 @@ removeFilter = () => {
 
 }
 for (var item of document.querySelectorAll(".text-head")) {
-    item.addEventListener("click", function () {
-        console.log("hello");
-        url = 'http:///?name=' + encodeURIComponent(b);
-        document.location.href = url;
-        window.location.href = "http://www.google.com";
-    });
+    item.addEventListener("click", function (e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement,
+            text = target.textContent || target.innerText;
+        localStorage.setItem("detailItemId", text);
+        window.open("./detail.html");
+    }, false);
 }
 
