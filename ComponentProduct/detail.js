@@ -44,3 +44,4 @@ let storeData = [
 ]
 
 let detailId = localStorage.getItem("detailItemId");
+console.log(detailId);

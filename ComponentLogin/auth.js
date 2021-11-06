@@ -1,76 +1,52 @@
-throwErr = (elemId,errMessage,flag)=>{
-  if(flag==true)
-  {
-
-      document.getElementById(elemId).innerHTML=errMessage;
-      document.getElementById(elemId).display="block";
-  }
-  else
-{    document.getElementById(elemId).innerHTML=errMessage;
-  document.getElementById(elemId).style.display="none";}
+let userData = {
+    Id: "Amresh",
+    Pass: "amreshjr"
+};
+errMessage = (errMsg, ErrId, flag) => {
+    if (flag == true) {
+        document.getElementById(ErrId).style.display = "block";
+        document.getElementById(ErrId).innerHTML = errMsg;
+    }
+    else {
+        document.getElementById(ErrId).style.display = "none";
+        document.getElementById(ErrId).innerHTML = errMsg;
+    }
 }
-redBox = (id,flag) =>{
-if(flag==true)
-  document.getElementById(id).style.border='1px solid red';
-  else
-  document.getElementById(id).style.border='1px solid #ccc';
-  
-}
-try{
-  validateForm=()=>{
-      let pass = document.validate.pass.value;
-      let mail =document.validate.mail.value;
+validate = (e) => {
+
+    e.preventDefault();
+    const userId = document.log_inForm.Name.value;
+    const userPass = document.log_inForm.Pass.value;
+    const remember = document.getElementById("exampleCheck1");
+    console.log(remember.checked);
+    let idErr = passErr = true;
+    if (userId == userData.Id && userPass == userData.Pass) {
+        idErr = passErr = false;
+        errMessage("", "emailHelp", idErr);
+        errMessage("", "passwordHelp", passErr);
+        localStorage.setItem("isLogIn", true);
+        if (remember == true)
+            localStorage.setItem("RememberMe", remember);
+        else
+            localStorage.setItem("RememberMe", remember);
+        location.href = "../ComponentProduct/index.html";
+
+    }
+    else if (userId == "" && userPass == "") {
+
+        errMessage("Enter the userId", "emailHelp", idErr);
+        errMessage("Enter the Password", "passwordHelp", passErr);
+    }
+    else if (userId != userData.Id && userPass != userData.Pass) {
+        errMessage("Enter valid userId", "emailHelp", idErr);
+        errMessage("Enter valid Password", "passwordHelp", passErr)
+    }
+    else if (userId == userData.Id && userPass != userData.Pass) {
+        idErr = false;
+        errMessage("", "emailHelp", idErr);
+        errMessage("Invalid Password", "passwordHelp", passErr);
+    }
 
 
-      let passErr = mailErr =true;
-      //name validation
-      if(pass == ""){
-          throwErr("nameErr","Please Enter your name",passErr);
-          redBox("nameBox",passErr);
-      }
-      else{
-          let check = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
-          if(check.test(pass) === true){
-              passErr = false;
-              redBox("nameBox",passErr);
-              throwErr("nameErr","Please Enter your name",passErr);
-          }
-          else{
-              throwErr("nameErr", "Invalid Name",passErr);
-              redBox("nameBox",passErr);
-          }
-      }
-      //mail validation
-      if(mail == ""){
-          throwErr("mailErr","Please Enter the Mail",mailErr);
-          redBox("mailBox",mailErr);
-      }
-      else{
-          let check = /^\S+@\S+\.\S+$/;
-          if(check.test(mail)=== true)
-          {
-              mailErr = false;
-              redBox("mailBox",mailErr);
-              throwErr("mailErr","",nameErr);
-          }
-          else{
-              throwErr("mailErr","Invalid Mail Address",mailErr);
-              redBox("mailBox",mailErr);
-          }
-      }
-      
-      if(passErr||mailErr == true)
-      {
-          return false;
-      }
-      else{
-        document.getElementById('email').innerHTML=mail;                         
-        document.getElementById('name').innerHTML=pass;
-      }
-  
-  }
-
-}
-catch(e){
-alert(e.message);
+    return false;
 }

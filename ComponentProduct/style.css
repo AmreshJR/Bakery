@@ -45,6 +45,7 @@ h5 {
   flex-direction: column;
   flex: 17%;
   transition: 0.8;
+  align-items: center;
   /* so child elements can use flexbox stuff too! */
 }
 

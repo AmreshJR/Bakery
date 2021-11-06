@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
   }
-
   .navbar {
     font-size: 30px;
     font-weight: bold;
     color: #d94545 !important;
   }
-  
+  .float{
+    float: right !important;
+  }
 .underline {
     text-decoration: underline;
     color: #d94545 !important;

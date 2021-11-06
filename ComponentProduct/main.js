@@ -43,6 +43,19 @@ let storeData = [
     }
 ];
 
+
+
+// logInStatus = () =>{
+//     if(isLogIn == true){
+//         let dom = document.querySelector("html");
+//         dom.style.display="none";
+//         console.log("hello");
+//         location.href="../ComponentLogin/index.html";
+//     }
+// }
+
+// logInStatus();
+
 showCart = (data) => {
     data.forEach(e => {
         let main = document.querySelector(".products"); //Access Product Div
