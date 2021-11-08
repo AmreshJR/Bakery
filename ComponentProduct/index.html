@@ -29,21 +29,19 @@
                   <li class="nav-item">
                     <a class="nav-link" href="./index.html">Products</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      About
-                    </a>
-                    <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item " href="#">Contact</a></li>
-                      <li><a class="dropdown-item" href="#">More Info</a></li>
-                    </ul>
-                  </li>
+                  <span class="Mlogin">
+                    <button type="button" id="mLogin" onclick="log()" class="btn btn-light">LogIn</button>
+                    <button type="button" id="mLogout" onclick="logout()" class="btn btn-light">Logout</button>
+                  </span>
                 </ul>
-
-                  
               </div>
+              <span class="login">
+                <button id ="logIn" type="button" onclick="log()" class="btn btn-light">LogIn</button>
+              
+                <button id="logOut" type="button" onclick="logout()" class="btn btn-light">Logout</button>
+              </span>
             </div>
+            
           </nav>
     <div class="search">
         <div class="input-group">
@@ -94,9 +92,7 @@
                 <p>
                   <a href="./index.html" class="text-reset">Products</a>
                 </p>
-                <p>
-                  <a href="#!" class="text-reset">About</a>
-                </p>
+               
               </div>
       
               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

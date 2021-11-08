@@ -44,18 +44,54 @@ let storeData = [
 ];
 
 
+let logIn = localStorage.getItem("isLogIn");
+let Remember = localStorage.getItem("RememberMe");
 
-// logInStatus = () =>{
-//     if(isLogIn == true){
-//         let dom = document.querySelector("html");
-//         dom.style.display="none";
-//         console.log("hello");
-//         location.href="../ComponentLogin/index.html";
-//     }
-// }
+logInStatus = (isLogIn,RememberMe) =>{
+    console.log(isLogIn,RememberMe);
 
-// logInStatus();
+    if(isLogIn == "false" && RememberMe == "false"){
+        let dom = document.querySelector("html");
+        dom.style.display="none";
+        console.log("hello");
+        location.href="../ComponentLogin/index.html";
+        console.log(isLogIn,RememberMe);
+        
+    }
+    else if(isLogIn == "true" && RememberMe == "false")
+       localStorage.setItem("isLogIn",false);
 
+}
+
+logInStatus(logIn,Remember);
+resetLogin = () =>{
+    if(Remember == false)
+    localStorage.setItem("isLogIn",false);
+}
+resetLogin();
+log = () =>{
+    location.href = "./ComponentLogin/index.html";
+}
+logout = () =>{
+    localStorage.setItem("isLogIn",false);
+    localStorage.setItem("RememberMe",false);
+}
+let logStatus = localStorage.getItem("isLogIn");
+console.log(logStatus);
+
+if(logStatus == "true")
+{
+    document.getElementById("logIn").style.display = "none";
+    document.getElementById("logOut").style.display="block";
+    document.getElementById("mLogin").style.display="none";
+    document.getElementById("mLogout").style.display="block";
+}
+else{
+    document.getElementById("logIn").style.display = "block";
+    document.getElementById("logOut").style.display="none";
+    document.getElementById("mLogin").style.display="block";
+    document.getElementById("mLogout").style.display="none";
+}
 showCart = (data) => {
     data.forEach(e => {
         let main = document.querySelector(".products"); //Access Product Div

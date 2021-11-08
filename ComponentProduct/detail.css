@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
   }
+  html{
+    box-sizing: border-box;
+    
+  }
+  body{
+    scroll-behavior: smooth;
+  }
   .navbar {
     font-size: 30px;
     font-weight: bold;
@@ -27,3 +34,55 @@
     height: 60px; /* Height of the footer */
   }
   
+  .Mlogin{
+    display: none;
+    }
+    .login button:hover,
+    .Mlogin button:hover{
+      background-color: #d94545;
+      color: white;
+    }
+    @media screen and (max-width:1400px)
+    {
+      .login{
+        display: none;
+      }
+      .Mlogin{
+        display: block;
+      }
+    }
+.content{
+  display: flex;
+  margin-top: 5vh;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.slideshow{
+ 
+
+  align-items: center;
+  justify-content: center;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.content p{
+  text-indent: 12em;
+  margin-top: 3em;
+  font-size: x-large;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.ImgDiv{
+ min-width: 500px;
+ min-height: 400px;
+ max-width: 600px;
+ max-height: 400px;
+}
+.ImgDiv img{
+  /* width: fit-content;
+  height: fit-content; */
+}

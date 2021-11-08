@@ -42,3 +42,20 @@ background-color: #FFCCD2 !important;
   }
   
   
+  .Mlogin{
+    display: none;
+    }
+    .login button:hover,
+    .Mlogin button:hover{
+      background-color: #d94545;
+      color: white;
+    }
+    @media screen and (max-width:1400px)
+    {
+      .login{
+        display: none;
+      }
+      .Mlogin{
+        display: block;
+      }
+    }
