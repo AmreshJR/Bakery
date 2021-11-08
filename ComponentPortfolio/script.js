@@ -21,3 +21,6 @@ else{
     document.getElementById("mLogin").style.display="block";
     document.getElementById("mLogout").style.display="none";
 }
+log = () =>{
+    location.href = "./ComponentLogin/index.html";
+}

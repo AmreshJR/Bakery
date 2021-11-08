@@ -40,7 +40,7 @@ let storeData = [
         ProductID: "Molten Chocolate Cakes",
         ProductValue: "Molten chocolate cakes also known as lava cakes, are rich individual chocolate cakes with oozing molten centers.",
         ProductSrc: "../src/Lava.jpg"
-    }
+    },
 ];
 
 

@@ -150,3 +150,7 @@ setContent = () =>{
 }
    
 setContent();
+
+log = () =>{
+    location.href = "./ComponentLogin/index.html";
+}

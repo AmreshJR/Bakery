@@ -9,7 +9,7 @@ body {
 .LoginForm {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 15%;
   padding: 50px;
   align-items: center;
   
@@ -99,4 +99,14 @@ input{
 }
 .form-control{
   min-width: 250px;
+}
+@media (max-width: 461px) {
+ .LoginForm{
+   margin-top: 50%;
+ }
+}
+@media (min-width: 461px) and (max-width:960px){
+  .LoginForm{
+    margin-top:30%;
+  }
 }
